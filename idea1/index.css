@@ -1,0 +1,39 @@
+::-webkit-scrollbar {
+    display: none;
+}
+*:not(#openP):not(#openMore):not(#inputID){
+    -webkit-app-region: drag;
+}
+body {
+    background: black;
+    color: white;
+    border: 1px solid red;
+}
+#text {
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+#openP {
+    padding: 10px;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#openP:hover{
+    color: black;
+    background: white;
+    cursor: pointer;
+}
+#inputID {
+    -webkit-app-region: none;
+    margin: 0 15px 15px 15px;
+    padding: 5px;
+}
+#serverLabel {
+    margin-top: 5px;
+    text-align: center;
+    width: 100px;
+    color:white;
+}
