@@ -4,17 +4,15 @@ function createWindow () {
   
   win = new BrowserWindow({
     opacity: 0.7,
-    width: 0,
-    height: 0,
+    width: 1000,
+    height: 1000,
     frame: false,
     backgroundColor: '#000000',
-    x: 1500,
-    y: 100,
     webPreferences: {
       nodeIntegration: true
     }
   })
-win.loadFile('widget/index.html')
+win.loadFile('website/index.html')
 
 // Emitted when the window is closed.
   win.on('closed', () => {
