@@ -1,13 +1,12 @@
 ::-webkit-scrollbar {
     display: none;
 }
-*:not(#openP):not(#openMore):not(#inputID){
+*:not(#openP):not(#openMore):not(#inputID):not(#server){
     -webkit-app-region: drag;
 }
 body {
     background: black;
     color: white;
-    border: 1px solid red;
 }
 #text {
     width: 200px;
@@ -29,11 +28,14 @@ body {
 #inputID {
     -webkit-app-region: none;
     margin: 0 15px 15px 15px;
-    padding: 5px;
+    padding: 5px; 
 }
 #serverLabel {
     margin-top: 5px;
     text-align: center;
     width: 100px;
     color:white;
+}
+#server {
+    -webkit-app-region: none;
 }

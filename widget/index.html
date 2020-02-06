@@ -5,20 +5,32 @@
     <link rel="stylesheet" href="index.css">
     <script src="index.js"></script>
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
-    <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js" integrity="sha384-3LaF+GDeugL4KEmnsbb+HuxO42PMnX+W5VYrAF98SHC8Wq47T6D7WpBckxQuazOA" crossorigin="anonymous"></script>
+    <!-- <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js" integrity="sha384-3LaF+GDeugL4KEmnsbb+HuxO42PMnX+W5VYrAF98SHC8Wq47T6D7WpBckxQuazOA" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js" integrity="sha384-04YC4/4bnGBjX66zkPM2372a4vmHIXVxQwIjLC/NWcMnEAcfYLASjt3cizYDmWBJ" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" integrity="sha384-VgZgZqjY9Fh+YsIGYp/Vzpbz9fdsC3TLwB4MrpOstd9QcaJdH/8aYw5vwisv8i8d" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js" integrity="sha384-VgZgZqjY9Fh+YsIGYp/Vzpbz9fdsC3TLwB4MrpOstd9QcaJdH/8aYw5vwisv8i8d" crossorigin="anonymous"></script> -->
 
   </head>
   <body>
+    <script type="application/javascript">
+      window.addEventListener('message',function(e){
+        if (e.data.uid&&e.data.type==='sizeUpdate'){
+          var i = document.querySelector('iframe[name="'+e.data.uid+'"]')
+          i.style.width = e.data.payload.width
+          i.style.height = e.data.payload.height
+        }
+      })
+    </script>
+    <!-- <div id="text"> -->
+      <!-- <iframe id="server" src="https://cdn.battlemetrics.com/b/standardVertical/433768.html?foreground=%23EEEEEE&linkColor=%231185ec&lines=%23333333&background=%23222222&chart=players%3A24H&chartColor=%23FF0700&maxPlayersHeight=300" frameborder=1 style="border:0" name="hrfdp"></iframe> -->
+    <!-- </div> -->
     <div id="serv">
       <div id="text">
-        <p id="serverName"></p>
+        <!-- <p id="serverName"></p>
         <p id="serverPlayers"></p>
+        <p id="wipeTime"></p> -->
       </div>
       <div id="openMore" >
         <p id="openP">+</p>
-
       </div>
   </body>
 </html>

@@ -2,7 +2,7 @@
   "name": "windows-widget",
   "version": "1.0.0",
   "description": "",
-  "main": "idea1/main.js",
+  "main": "main.js",
   "dependencies": {
     "electron-packager": "^14.1.1"
   },
